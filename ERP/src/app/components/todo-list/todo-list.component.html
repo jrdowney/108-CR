@@ -1,0 +1,54 @@
+
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+      <div class="row container d-flex">
+          <div class="col-lg-12">
+              <div class="card px-3">
+                  <div class="card-body">
+                      <h3 class="card-title">Todo List</h3>
+                      <div class="add-items d-flex">
+                        <input [(ngModel)]= todoText (keydown.enter)="saveTodo()" type="text" class="form-control todo-list-input" placeholder="What do you need to do today?">
+
+                        <button (click)="saveTodo()" class="add btn btn-primary font-weight-bold todo-list-add-btn col-sm-3">Add</button>
+
+                       </div>
+                          <div class="list-wrapper">
+                            <ul class="d-flex flex-column-reverse todo-list">
+
+
+                                <li *ngFor="let todo of todoList">
+                                    <div>
+                                      <input (click)="todoClicked(todo)" type="checkbox">
+                                      <label>{{ todo }}</label>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+
+                          </div>
+
+                          <div>
+                            <button (click)="deleteTodo()" class="btn btn-secondary col-sm-3">Clear List</button>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <div class="padding">
+  <div class="row container d-flex justify-content-center">
+    <div class="form">
+      <input [(ngModel)]= todoText type="text" class="form-control">
+      <button (click)="saveTodo()"  class="btn btn-sm btn-info">Add</button>
+    </div>
+
+    <div class="list form-check">
+      <ul>
+        <li *ngFor="let todo of todoList">{{ todo }} </li>
+      </ul>
+    </div>
+  </div>
+</div> -->

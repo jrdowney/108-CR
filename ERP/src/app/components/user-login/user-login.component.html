@@ -1,0 +1,29 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<form class="col-md-9 offset-1.3 form shadow-lg p-3 mb-5 bg-white rounded container-fluid">
+  <h3>User Login</h3>
+  <div class="form-group row">
+    <label for="text" class="col-3 col-form-label">User Name</label>
+    <div class="col-6">
+      <input [(ngModel)]="userName" id="text" name="text" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text1" class="col-3 col-form-label">Password</label>
+    <div class="col-6">
+      <input [(ngModel)]="password" id="text1" name="text1" type="password" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-3 col-8">
+      <button [disabled]="userName =='' || password =='' " (click)="login()" name="submit" type="button" class="btn btn-primary">Login</button>
+    </div>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="showError">
+    Invalid credentials, please try again!
+  </div>
+</form>

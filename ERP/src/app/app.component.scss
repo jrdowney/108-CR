@@ -1,0 +1,25 @@
+
+html{
+  position: relative;
+  min-height: 100%;
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+.page-content{
+  min-height: 620px;
+  height: auto;
+}
+
+.footer {
+   height: 70px;
+   clear: both;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+ }
+
+//
